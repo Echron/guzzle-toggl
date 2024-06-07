@@ -179,9 +179,17 @@
     },
     "GetClients": {
       "httpMethod": "GET",
-      "uri": "me/clients",
+      "uri": "workspaces/{workspace_id}/clients",
       "summary": "Get clients visible to user",
-      "responseModel": "getResponse"
+      "responseModel": "getResponse",
+      "parameters": {
+        "workspace_id": {
+          "location": "uri",
+          "type": "integer",
+          "required": true,
+          "description": "Workspace ID"
+        }
+      }
     },
     "GetClientProjects": {
       "httpMethod": "GET",
